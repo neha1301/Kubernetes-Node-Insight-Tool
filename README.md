@@ -17,3 +17,24 @@ kubectl describe node <node>
 kubectl top nodes
 kubectl get pods -A --field-selector spec.nodeName=<node>
 kubectl get events -A
+```
+## 📊 Example Output
+
+```bash
+Node: ip-10-0-2-45
+Age: 9.3d | Ready: False | Cordoned: False
+Instance: m5.large | Capacity: spot | AZ: us-east-1a
+Karpenter: True
+
+Resources:
+  CPU Used: 91.3%
+  Memory Used: 89.7%
+  DiskPressure: True
+
+Workloads:
+  Evicted Pods: 7
+  Failing system pods: kube-proxy
+
+Notes:
+  • DiskPressure reported by kubelet
+```
